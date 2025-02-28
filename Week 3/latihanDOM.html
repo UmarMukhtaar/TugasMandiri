@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Contoh DOM Lengkap</title>
+</head>
+<body>
+  <div id="container">
+    <p id="paragraf1">Ini adalah paragraf pertama.</p>
+    <p id="paragraf2">Ini adalah paragraf kedua.</p>
+    <button id="tombolUbahWarna">Ubah Warna</button>
+  </div>
+
+  <script>
+    // Membuat elemen baru
+    var judulBaru = document.createElement("h2");
+    judulBaru.textContent = "Judul Baru Ditambahkan";
+    document.getElementById("container").appendChild(judulBaru);
+
+    // Mengubah atribut elemen
+    var paragraf1 = document.getElementById("paragraf1");
+    paragraf1.style.fontWeight = "bold";
+
+    // Menangani event klik
+    document.getElementById("tombolUbahWarna").addEventListener("click", function() {
+      var container = document.getElementById("container");
+      container.style.backgroundColor = "lightblue";
+    });
+  </script>
+</body>
+</html>

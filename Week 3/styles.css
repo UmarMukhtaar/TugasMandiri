@@ -1,0 +1,191 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #008080;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+.container {
+    border: 2px solid black;
+    padding: 10px;
+    position: relative; /*induk elemen absolute*/
+    height: 100px;
+    margin-bottom: 20px;
+}
+
+/* Bagian 2: Margin dan Padding */
+section {
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Bagian 3: Pengaturan Font */
+h2 {
+    color: #008080;
+    font-size: 2em;
+    margin-bottom: 15px;
+}
+
+/* Bagian 4: Format Teks */
+p {
+    margin-top: 0;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+/* Bagian 5: Position */
+#wisata {
+    position: relative; /* Menjadikan section sebagai positioned element */
+}
+
+.position {
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.position img {
+    width: 300px;
+    height: auto;
+    border-radius: 5px;
+    float: left;
+    margin-right: 20px;
+}
+
+.position h3 {
+    margin-top: 0;
+}
+
+.static {
+    position: static;
+}
+
+.relative {
+    position: relative;
+    left: 20px; 
+    top: 10px; 
+    background-color: lightblue;
+}
+
+.fixed {
+    position: fixed;
+    padding: 10px;
+    bottom: 10px;
+    right: 10px;
+    width: 160px;
+    background-color: lightgreen;
+}
+
+.absolute {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    width: 150px;
+    background-color: lightcoral;
+}
+
+.sticky {
+    position: sticky;
+    top: 0;
+    background-color: lightsalmon;
+    padding: 10px;
+}
+
+/* Bagian 6: Float */
+.float-container {
+    overflow: hidden; /* Mencegah elemen container collapse */
+}
+
+.float-left {
+    float: left;
+    margin-right: 20px;
+}
+
+.float-right {
+    float: right;
+    margin-left: 20px;
+}
+
+.float-left img,
+.float-right img {
+    width: 300px; /* Sesuaikan ukuran gambar */
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Bagian 7: Desain Tabel */
+.table1 {
+    font-family: sans-serif;
+    color: #444;
+    border-collapse: collapse;
+    width: 100%;
+    border: 1px solid #f2f5f7;
+}
+
+.table1 tr th {
+    background: #35A9DB;
+    color: #fff;
+    font-weight: normal;
+}
+
+.table1,
+th,
+td {
+    padding: 8px 20px;
+    text-align: center;
+}
+
+.table1 tr:hover {
+    background-color: #f5f5f5;
+}
+
+.table1 tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+input[type="submit"] {
+    background-color: #008080;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #ddd;
+}
