@@ -7,27 +7,27 @@
     <link rel="stylesheet" type="text/css" href="formstyle.css">
 </head>
 <body>
-    <form id="registrationForm">
+    <form id="registrationForm" onsubmit="return validasiNama()">
         <h2>Formulir Pendaftaran</h2>
-        
+
         <div class="form-group">
             <label for="nama">Nama Lengkap</label>
             <span class="separator">:</span>
             <input type="text" id="nama" name="nama" required>
         </div>
-        
+
         <div class="form-group">
             <label for="alamat">Alamat</label>
             <span class="separator">:</span>
             <input type="text" id="alamat" name="alamat" required>
         </div>
-        
+
         <div class="form-group">
             <label for="tptLahir">Tempat Lahir</label>
             <span class="separator">:</span>
             <input type="text" id="tptLahir" name="tptLahir" required>
         </div>
-        
+
         <div class="form-group">
             <label for="tglLahir">Tanggal Lahir</label>
             <span class="separator">:</span>
@@ -45,5 +45,20 @@
         
         <input type="submit" value="Daftar">
     </form>
+
+    <script>
+        function validasiNama() {
+            let inputNama = document.getElementById("nama").value;
+            let pola = /^[a-zA-Z' ]+$/; // Hanya huruf, spasi, dan petik satu yang diperbolehkan
+    
+            if (!pola.test(inputNama)) {
+                alert("Nama hanya boleh berisi huruf dan tanda petik satu (')");
+                return false;
+            }
+            alert("Nama valid!");
+            return true;
+        }
+    </script>
+    
 </body>
 </html>

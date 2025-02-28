@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Penerapan DOM dan Event Handling</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            margin: 20px;
+            background-color: lightblue;
+        }
+
+        .input-box {
+            display: block;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Contoh Penerapan DOM dan Event Handling</h1>
+
+    <div class="box" id="hoverBox">
+        Hover over me!
+    </div>
+
+    <input type="text" id="inputBox" class="input-box" placeholder="Type something...">
+
+    <script>
+        // Menggunakan DOM untuk mengakses elemen
+        var hoverBox = document.getElementById("hoverBox");
+        var inputBox = document.getElementById("inputBox");
+
+        // Menambahkan event listener untuk onmouseover
+        hoverBox.onmouseover = function() {
+            hoverBox.style.backgroundColor = "lightgreen";
+            hoverBox.innerHTML = "Mouse is over!";
+        };
+
+        // Menambahkan event listener untuk onmouseout
+        hoverBox.onmouseout = function() {
+            hoverBox.style.backgroundColor = "lightblue";
+            hoverBox.innerHTML = "Hover over me!";
+        };
+
+        // Menambahkan event listener untuk onkeydown
+        inputBox.onkeydown = function(event) {
+            if (event.key === "Enter") {
+                alert("You pressed Enter!");
+            }
+        };
+    </script>
+</body>
+</html>
