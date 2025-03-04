@@ -6,7 +6,39 @@
     <title>Hello World</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    <h1 class="text-3xl font-bold">Ashephian</h1>
+<body class="bg-gradient-to-r from-indigo-200 via-purple-200 to-pink-200 flex justify-center items-center min-h-screen">
+    <div class="bg-white shadow-lg rounded-xl p-8 max-w-lg border border-gray-300">
+        <h1 class="text-3xl font-bold text-indigo-700 mb-4">Tailwind CSS Utilities</h1>
+        
+        <!-- Spacing -->
+        <div class="mb-6 p-4 border border-gray-400">Spacing: Padding & Margin</div>
+        
+        <!-- Sizing -->
+        <div class="h-32 w-64 bg-blue-300 flex justify-center items-center mb-6">
+            Sizing: Width & Height
+        </div>
+        
+        <!-- Typography -->
+        <p class="text-lg text-gray-800 mb-6">Typography: Type & Color</p>
+        
+        <!-- Background -->
+        <div class="bg-gradient-to-r from-teal-300 to-cyan-500 p-4 text-white font-semibold mb-6">
+            Background: Palette & Gradient
+        </div>
+        
+        <!-- Background Attachment & Overflow -->
+        <div class="bg-cover bg-center bg-fixed h-40 w-full overflow-hidden" style="background-image: url('https://source.unsplash.com/random/800x600');">
+            <p class="text-white text-center p-4 bg-black bg-opacity-50">Background Attachment & Overflow</p>
+        </div>
+        
+        <!-- Border -->
+        <div class="border-4 border-dashed border-red-500 p-4 text-red-500 mt-6">Border Styles</div>
+        
+        <!-- Effect -->
+        <div class="shadow-2xl p-4 mt-6 opacity-90 text-gray-700">Effects: Shadow & Opacity</div>
+        
+        <!-- Filter -->
+        <img src="sejarah.jpg" class="mt-6 filter blur-sm hover:blur-none rounded-lg" alt="Filtered Image">
+    </div>
 </body>
 </html>
