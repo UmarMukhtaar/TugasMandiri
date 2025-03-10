@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulir Pendaftaran</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="flex items-center justify-center min-h-screen bg-cover bg-center" style="background-image: url('background1.jpg');">
+
+    <div class="bg-white bg-opacity-30 backdrop-blur-md p-6 rounded-lg shadow-lg w-full max-w-md">
+        <h2 class="text-2xl font-semibold text-center mb-4 text-white">Formulir Pendaftaran</h2>
+        <form id="registrationForm" class="space-y-4">
+            
+            <div>
+                <label class="block font-medium text-white">Nama Lengkap</label>
+                <input type="text" id="nama" class="w-full p-2 border rounded focus:ring-2 focus:ring-blue-400 bg-white bg-opacity-50">
+                <p class="text-red-500 text-sm mt-1 hidden" id="error-nama">Nama harus diisi!</p>
+            </div>
+
+            <div>
+                <label class="block font-medium text-white">Alamat</label>
+                <input type="text" id="alamat" class="w-full p-2 border rounded focus:ring-2 focus:ring-blue-400 bg-white bg-opacity-50">
+                <p class="text-red-500 text-sm mt-1 hidden" id="error-alamat">Alamat harus diisi!</p>
+            </div>
+
+            <div>
+                <label class="block font-medium text-white">Tempat Lahir</label>
+                <input type="text" id="tempatLahir" class="w-full p-2 border rounded focus:ring-2 focus:ring-blue-400 bg-white bg-opacity-50">
+                <p class="text-red-500 text-sm mt-1 hidden" id="error-tempatLahir">Tempat lahir harus diisi!</p>
+            </div>
+
+            <div>
+                <label class="block font-medium text-white">Tanggal Lahir</label>
+                <input type="date" id="tanggalLahir" class="w-full p-2 border rounded focus:ring-2 focus:ring-blue-400 bg-white bg-opacity-50">
+                <p class="text-red-500 text-sm mt-1 hidden" id="error-tanggalLahir">Tanggal lahir harus diisi!</p>
+            </div>
+
+            <div>
+                <label class="block font-medium text-white">Jenis Kelamin</label>
+                <div class="flex items-center space-x-4 text-white">
+                    <label class="flex items-center">
+                        <input type="radio" name="gender" value="Laki-laki" class="text-blue-500">
+                        <span class="ml-2">Laki-laki</span>
+                    </label>
+                    <label class="flex items-center">
+                        <input type="radio" name="gender" value="Perempuan" class="text-blue-500">
+                        <span class="ml-2">Perempuan</span>
+                    </label>
+                </div>
+                <p class="text-red-500 text-sm mt-1 hidden" id="error-gender">Pilih jenis kelamin!</p>
+            </div>
+
+            <button type="submit" class="w-full bg-green-500 text-white py-2 rounded hover:bg-green-600 transition">Daftar</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById("registrationForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Mencegah form terkirim sebelum validasi
+
+            let isValid = true;
+
+            // Ambil semua elemen input
+            let nama = document.getElementById("nama");
+            let alamat = document.getElementById("alamat");
+            let tempatLahir = document.getElementById("tempatLahir");
+            let tanggalLahir = document.getElementById("tanggalLahir");
+            let gender = document.querySelector('input[name="gender"]:checked');
+
+            // Reset error
+            document.getElementById("error-nama").classList.add("hidden");
+            document.getElementById("error-alamat").classList.add("hidden");
+            document.getElementById("error-tempatLahir").classList.add("hidden");
+            document.getElementById("error-tanggalLahir").classList.add("hidden");
+            document.getElementById("error-gender").classList.add("hidden");
+
+            // Validasi input
+            if (nama.value.trim() === "") {
+                document.getElementById("error-nama").classList.remove("hidden");
+                isValid = false;
+            }
+            if (alamat.value.trim() === "") {
+                document.getElementById("error-alamat").classList.remove("hidden");
+                isValid = false;
+            }
+            if (tempatLahir.value.trim() === "") {
+                document.getElementById("error-tempatLahir").classList.remove("hidden");
+                isValid = false;
+            }
+            if (tanggalLahir.value === "") {
+                document.getElementById("error-tanggalLahir").classList.remove("hidden");
+                isValid = false;
+            }
+            if (!gender) {
+                document.getElementById("error-gender").classList.remove("hidden");
+                isValid = false;
+            }
+
+            // Jika valid, kirim form
+            if (isValid) {
+                alert("Form berhasil dikirim!");
+                this.submit();
+            }
+        });
+    </script>
+
+</body>
+</html>

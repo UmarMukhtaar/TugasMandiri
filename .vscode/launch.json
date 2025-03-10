@@ -1,0 +1,14 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "msedge",
+            "request": "launch",
+            "name": "Open responsive_design.html",
+            "file": "c:\\My Folder\\My Personal Folder\\Coolyah\\Semester 4\\PemWeb\\TugasMandiri\\Week 4\\responsive_design.html"
+        }
+    ]
+}
